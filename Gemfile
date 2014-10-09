@@ -20,6 +20,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'paratrooper'
+# figaro not needed for secret_key_base
 gem 'figaro'
 
 # bundle exec rake doc:rails generates the API under doc/api.
