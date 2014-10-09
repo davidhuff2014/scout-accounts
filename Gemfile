@@ -19,6 +19,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
+# for deployment to heroku
 gem 'paratrooper'
 # figaro not needed for secret_key_base
 gem 'figaro'
