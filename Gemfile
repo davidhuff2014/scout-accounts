@@ -23,6 +23,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'paratrooper'
 # figaro not needed for secret_key_base
 gem 'figaro'
+# sass powered bootstrap
+gem 'bootstrap-sass'
+# boot for forms
+gem 'bootstrap_form'
+# need my haml
+gem 'haml-rails'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
