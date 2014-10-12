@@ -55,6 +55,10 @@ group :development, :test do
   gem 'spring'
   # time to do some testing
   gem 'rspec-rails'
+  # lets build something to test
+  gem 'fabrication'
+  # need some data populated
+  gem 'faker'
 end
 
 group :production, :staging do
