@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe ScoutsController, :type => :controller do
   describe 'GET #index' do
+    
     it 'populates an array of scouts' do
       scout = Fabricate(:scout)
       get :index
