@@ -7,3 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Scout.create(full_name: 'Dave Huff')
+Troop.create(troop_number: 261)
