@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013185218) do
+ActiveRecord::Schema.define(version: 20141013210532) do
+
+  create_table "accounts", force: true do |t|
+    t.integer  "scout_id"
+    t.date     "transaction_date"
+    t.string   "transaction"
+    t.integer  "payment"
+    t.integer  "deposit"
+    t.integer  "total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "scouts", force: true do |t|
     t.string   "full_name"
