@@ -8,3 +8,5 @@
 
 Scout.create(full_name: 'Dave Huff')
 Troop.create(troop_number: 261)
+Account.create(scout_id: 1, tranaction_date: '2014-10-14', payment: 800, transaction: 'money was deposited', deposit: 800, total: 800)
+# TODO will not seed
