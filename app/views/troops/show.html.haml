@@ -1,0 +1,4 @@
+%section.show
+  %h1= @troop.troop_number
+  - @troop.scouts.each do |scout|
+    %td= scout.full_name

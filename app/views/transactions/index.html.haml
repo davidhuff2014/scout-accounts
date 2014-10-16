@@ -1,7 +1,8 @@
-- @transactions.each do |transaction|
-  %td= transaction.scout_id
-  %td= transaction.transaction_date
-  %td= transaction.transaction_memo
-  %td= transaction.payment
-  %td= transaction.deposit
-  %td= transaction.running_total
+%section.index
+  - @transactions.each do |transaction|
+    %td= transaction.scout_id
+    %td= transaction.transaction_date
+    %td= transaction.transaction_memo
+    %td= transaction.payment
+    %td= transaction.deposit
+    %td= transaction.running_total
