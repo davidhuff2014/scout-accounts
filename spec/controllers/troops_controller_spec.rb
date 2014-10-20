@@ -1,6 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe TroopsController, :type => :controller do
+
+  describe 'GET #new' do
+    it 'sets @troop to a new troop' do
+      get :new
+      expect(assigns(:troop)).to be_new_record
+      expect(assigns(:troop)).to be_instance_of Troop
+    end
+  end
+
   describe 'GET #index' do
 
     it 'populates an array of troops' do

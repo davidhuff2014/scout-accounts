@@ -30,9 +30,6 @@ gem 'paratrooper'
 # figaro not needed for secret_key_base
 gem 'figaro'
 
-
-
-
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
@@ -52,13 +49,15 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  # gem 'spring'
   # time to do some testing
   gem 'rspec-rails'
   # lets build something to test
   gem 'fabrication'
   # need some data populated
   gem 'faker'
+  # go really fast
+  gem 'zeus'
 end
 
 group :production, :staging do

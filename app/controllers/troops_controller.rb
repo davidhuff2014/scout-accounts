@@ -3,6 +3,10 @@ class TroopsController < ApplicationController
     @troops = Troop.all
   end
 
+  def new
+    @troop = Troop.new
+  end
+
   def show
     @troop = Troop.find(params[:id])
   end
