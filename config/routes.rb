@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   get 'scouts',       to: 'scouts#index'
   # get 'troops',       to: 'troops#index'
   get 'transactions', to: 'transactions#index'
-  get 'users', to: 'users#index'
+  # get 'users', to: 'users#index'
 
   resources :troops, only: [:new, :index, :show]
+  resources :users, only: [:new, :index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
