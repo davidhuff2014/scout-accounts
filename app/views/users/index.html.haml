@@ -1,0 +1,5 @@
+%section.index
+  - @users.each do |user|
+    %td= user.email
+    %td= user.password_digest
+    %td= user.full_name

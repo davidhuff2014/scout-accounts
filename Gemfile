@@ -30,6 +30,9 @@ gem 'paratrooper'
 # figaro not needed for secret_key_base
 gem 'figaro'
 
+# encryption, and needed for password_digest
+gem 'bcrypt'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
