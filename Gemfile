@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # sass powered bootstrap
 gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -14,6 +14,6 @@
 //=# keep it in the family turn off regular turbolinks
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require bootstrap
+//= require bootstrap-sprockets
 //=# require turbolinks #using jquery.turbolinks instead
 //= require_tree .
