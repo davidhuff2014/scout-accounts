@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//=# keep it in the family turn off regular bootstrap
+//=# keep it in the family turn off regular turbolinks
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
