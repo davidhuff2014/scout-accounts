@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   # get 'users', to: 'users#index'
 
   resources :troops, only: [:new, :index, :show]
-  resources :users, only: [:new, :index]
+  resources :users, only: [:new, :index, :create]
+
+  get 'sign_in', to: 'users#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
