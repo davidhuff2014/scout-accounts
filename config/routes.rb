@@ -5,11 +5,14 @@ Rails.application.routes.draw do
   # get 'troops',       to: 'troops#index'
   get 'transactions', to: 'transactions#index'
   # get 'users', to: 'users#index'
+  get 'home', to: 'scouts#index' # soon to be accounts index?
 
   resources :troops, only: [:new, :index, :show]
   resources :users, only: [:new, :index, :create]
 
-  get 'sign_in', to: 'users#create'
+  get 'sign_in', to: 'sessions#new'
+
+  resources :sessions, only: [:create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
