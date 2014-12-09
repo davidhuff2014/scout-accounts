@@ -1,4 +1,5 @@
 class TroopsController < ApplicationController
+  before_filter :require_user
   def index
     @troops = Troop.all
   end

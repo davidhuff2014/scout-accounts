@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126202347) do
+ActiveRecord::Schema.define(version: 20141209211025) do
 
   create_table "scouts", force: true do |t|
     t.string   "full_name"
@@ -35,6 +35,9 @@ ActiveRecord::Schema.define(version: 20141126202347) do
     t.integer  "troop_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "location"
+    t.integer  "inception_year"
+    t.string   "charter_sponsor"
   end
 
   create_table "users", force: true do |t|

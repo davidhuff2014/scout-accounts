@@ -1,3 +1,21 @@
-%section.index
-  - @troops.each do |troop|
-    %td= troop.troop_number
+%section.index.container
+  .row
+    .col-sm-10.col-sm-offset-1
+      %article
+        %header
+          %h1 Troops
+        = bootstrap_form_tag do
+          %table.table
+            %thead
+              %tr
+                %th(width="20%") Troop Number
+                %th(width="30%") Location
+                %th(width="30%") Charter Sponsor
+                %th(width="10%") Inception Year
+            %tbody
+            - @troops.each do |troop|
+              %tr
+                %td= troop.troop_number
+                %td= troop.location
+                %td= troop.charter_sponsor
+                %td= troop.inception_year
