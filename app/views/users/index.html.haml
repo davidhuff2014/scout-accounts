@@ -1,17 +1,18 @@
 %section.index.container
   .row
-    .col-sm-6.col-sm-offset-1
-      %header
-        %h1 Users Logged In
-        %table.table
-          %thead
-          %tr
-            %th(width="50%") Email
-            -#%th(width="20%") Password Digest
-            %th(width="50%") Name
-          %tbody
-        - @users.each do |user|
-          %tr
-            %td= user.email
-            -#%td= user.password_digest
-            %td= user.full_name
+    .col-sm-10.col-sm-offset-1
+      %article
+        %header
+          %h1 Users Logged In
+          %table.table
+            %thead
+              %tr
+                %th(width="50%") Email
+                -#%th(width="20%") Password Digest
+                %th(width="50%") Name
+              %tbody
+            - @users.each do |user|
+              %tr
+                %td= user.email
+                -#%td= user.password_digest
+                %td= user.full_name

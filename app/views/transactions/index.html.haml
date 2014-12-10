@@ -1,8 +1,24 @@
-%section.index
-  - @transactions.each do |transaction|
-    %td= transaction.scout_id
-    %td= transaction.transaction_date
-    %td= transaction.transaction_memo
-    %td= transaction.payment
-    %td= transaction.deposit
-    %td= transaction.running_total
+%section.index.container
+  .row
+    .col-sm-10.col-sm-offset-1
+      %article
+        %header
+          %h1 Troops
+          %table.table
+            %thead
+              %tr
+                %th(width="5%") Scout ID
+                %th(width="20%") Transaction Date
+                %th(width="50%") Transaction Memo
+                %th(width="10%") Payment Amount
+                %th(width="10%") Deposit Amount
+                %th(width="10%") Running Total
+            %tbody
+            - @transactions.each do |transaction|
+              %tr
+                %td= transaction.scout_id
+                %td= transaction.transaction_date
+                %td= transaction.transaction_memo
+                %td= number_to_currency(transaction.payment / 100)
+                %td= number_to_currency(transaction.deposit / 100)
+                %td= number_to_currency(transaction.running_total / 100)

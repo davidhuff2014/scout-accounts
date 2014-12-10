@@ -1,3 +1,17 @@
-%section.index
-  - @scouts.each do |scout|
-    %td= scout.full_name
+%section.index.container
+  .row
+    .col-sm-10.col-sm-offset-1
+      %article
+        %header
+          %h1 Scouts
+          %table.table
+            %thead
+              %tr
+                %th(width="20%") Scout Name
+                -#%th(width="30%") Location
+                -#%th(width="30%") Charter Sponsor
+                -#%th(width="10%") Inception Year
+            %tbody
+            - @scouts.each do |scout|
+              %tr
+                %td= scout.full_name
