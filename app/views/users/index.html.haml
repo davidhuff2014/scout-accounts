@@ -8,11 +8,9 @@
             %thead
               %tr
                 %th(width="50%") Email
-                -#%th(width="20%") Password Digest
                 %th(width="50%") Name
             %tbody
             - @users.each do |user|
               %tr
                 %td= user.email
-                -#%td= user.password_digest
                 %td= user.full_name
