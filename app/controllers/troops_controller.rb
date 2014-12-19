@@ -8,6 +8,10 @@ class TroopsController < ApplicationController
     @troop = Troop.new
   end
 
+  def create
+    render :new
+  end
+
   def show
     @troop = Troop.find(params[:id])
   end

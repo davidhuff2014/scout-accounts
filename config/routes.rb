@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # get 'users', to: 'users#index'
   get 'home', to: 'users#index'
 
-  resources :troops, only: [:new, :index, :show]
+  resources :troops, only: [:new, :index, :show, :create]
   resources :users, only: [:new, :index, :create]
   get 'register', to: 'users#new'
 

@@ -53,4 +53,17 @@ RSpec.describe TroopsController, :type => :controller do
       expect(response).to render_template :show
     end
   end
+
+  # describe 'POST #create' do
+  #
+  #   it 'creates a troop' do
+  #     troop = Fabricate(:troop)
+  #     post :create
+  #     expect(response).to eq(troop)
+  #   end
+  #
+  #   it 'redirects to the troops show page' do
+  #
+  #   end
+  # end
 end
