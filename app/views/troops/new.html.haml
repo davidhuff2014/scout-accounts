@@ -13,7 +13,11 @@
             .form-group
               %label.control-label.col-sm-3 Inception Year
               .col-sm-2.col-sm-offset-0
-                = select_year(Date.today.year, {start_year: Date.today.year - 120, end_year: Date.today.year + 4}, class: 'form-control', data: :inception_year)
+                = select_year @troop.inception_year, { :prompt => 'Year', :start_year => Date.today.year,
+                                                                          :end_year => Date.today.year - 120,
+                                                                          :field_name => :inception_year,
+                                                                          :prefix => :troop },
+                                                                          class:'form-control'
             .form-group
               %label
               .col-sm-2.col-sm-offset-3
