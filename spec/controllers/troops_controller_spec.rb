@@ -56,13 +56,13 @@ RSpec.describe TroopsController, :type => :controller do
 
   describe 'POST #create' do
 
-    it 'creates a troop' do
-      post :create, troop: Fabricate.attributes_for(:troop)
-      expect(response).to render_template :new
+    it_behaves_like 'requires sign in' do
+      let(:action) { post :create }
     end
 
-    it 'redirects to the troops show page' do
-
+    it 'creates a troop' do
+      post :create, troop: Fabricate.attributes_for(:troop)
+      expect(response).to redirect_to troops_path
     end
   end
 end
