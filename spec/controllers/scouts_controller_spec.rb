@@ -22,4 +22,18 @@ RSpec.describe ScoutsController, :type => :controller do
     end
   end
 
+  describe 'get #new' do
+
+    it_behaves_like 'requires sign in' do
+      let(:action) { get :new }
+    end
+
+    it 'sets @scout to a new scout' do
+      get :new
+      expect(assigns(:scout)).to be_new_record
+      expect(assigns(:scout)).to be_instance_of Scout
+    end
+
+  end
+
 end

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :troops, only: [:new, :index, :show, :create]
   resources :users, only: [:new, :index, :create]
+  resources :scouts, only: [:new, :index, :show, :create]
   get 'register', to: 'users#new'
 
   get 'sign_in', to: 'sessions#new'

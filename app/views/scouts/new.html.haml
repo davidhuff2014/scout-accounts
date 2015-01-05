@@ -1,0 +1,13 @@
+%section.scout.container
+  .row
+    .col-sm-10-col-sm-offset-1
+      %article
+        = bootstrap_form_for @scout, class: 'scout', layout: :horizontal, label_col: 'col-sm-3', control_col: 'col-sm-6' do |f|
+          %header
+            %h1 Enter Scout Information Here:
+          %fieldset
+            = f.text_field :full_name, control_col: 'col-sm-5'
+            - options = options_from_collection_for_select(Troop.all, 'id', 'troop_number')
+            = f.select :troop_id, options, control_col: 'col-sm-2'
+            .col-sm-offset-4
+              = f.submit value: 'Add Scout', class: 'btn btn-default'
