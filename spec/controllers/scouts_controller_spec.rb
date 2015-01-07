@@ -33,7 +33,17 @@ RSpec.describe ScoutsController, :type => :controller do
       expect(assigns(:scout)).to be_new_record
       expect(assigns(:scout)).to be_instance_of Scout
     end
+  end
 
+  describe 'post #create' do
+    it_behaves_like 'requires sign in' do
+      let(:action) { get :index }
+    end
+
+    it 'redirects to scouts path' do
+      post :create, Fabricate.attributes_for(:scout)
+      expect(response).to redirect_to scouts_path
+    end
   end
 
 end

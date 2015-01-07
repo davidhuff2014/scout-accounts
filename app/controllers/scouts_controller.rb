@@ -9,4 +9,8 @@ class ScoutsController < ApplicationController
     @scout = Scout.new
   end
 
+  def create
+    redirect_to scouts_path
+  end
+
 end
