@@ -65,6 +65,10 @@ group :development, :test do
   gem 'faker'
   # go really fast
   gem 'zeus'
+  # some high level testing
+  gem 'capybara'
+  # test through the browser
+  gem 'selenium-webdriver'
 end
 
 group :production, :staging do
