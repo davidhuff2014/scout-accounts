@@ -10,7 +10,7 @@ RSpec.describe UsersController, :type => :controller do
       bob = Fabricate(:user)
       # have to play these games otherwise the required user is also listed
       get :index
-      expect(assigns(:users)).to eq([alice, bob])
+      expect(assigns(:users)).to include alice and bob
     end
 
     it 'renders the :index view' do

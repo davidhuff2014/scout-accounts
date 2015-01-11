@@ -47,6 +47,9 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
+  # for use with database_cleaner which facilitates selenium-webdriver
+  config.use_transactional_fixtures = false
+
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 =begin
