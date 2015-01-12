@@ -13,17 +13,13 @@
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 #
-# must add this if you are using rspec
-ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../../config/environment", __FILE__)
-require 'rspec/rails'
-require 'capybara/rspec'
 
-# Needed for shared examples
-Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+# needed to keep mailer port straight
+# Capybara.server_port = 52662
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -46,9 +42,6 @@ RSpec.configure do |config|
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
   end
-
-  # for use with database_cleaner which facilitates selenium-webdriver
-  config.use_transactional_fixtures = false
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.

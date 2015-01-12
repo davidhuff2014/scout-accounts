@@ -73,6 +73,9 @@ group :development, :test do
   gem 'selenium-webdriver'
   # cleans up database so selenium-webdriver works correctly
   gem 'database_cleaner'
+  # catch some errors
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :production, :staging do
