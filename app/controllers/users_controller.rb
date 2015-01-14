@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      flash[:success] = "Welcome, #{ @user.full_name } you are now registered, please sign in!"
+      flash[:success] = "Thank you for registering with Scout Accounts, please sign in now."
       redirect_to sign_in_path
     else
       render :new
