@@ -2,8 +2,10 @@ require 'rails_helper'
 
 feature 'user adds troop' do
 
-  scenario 'valid user adds scout', { js: true } do
-    sign_in
+  # scenario 'valid user adds scout', { js: true } do
+  scenario 'valid user adds scout' do
+
+      sign_in
 
     visit new_troop_path
     troop = Fabricate(:troop)

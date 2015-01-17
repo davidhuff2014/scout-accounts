@@ -1,7 +1,9 @@
 require 'rails_helper'
 
-feature 'User registers', { js: true} do
-  background do
+feature 'User registers' do
+# feature 'User registers', { js: true} do
+
+    background do
     visit register_path
   end
 
