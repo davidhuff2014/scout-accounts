@@ -8,6 +8,7 @@
             %thead
               %tr
                 %th(width="20%") Scout Name
+                %th(width="20%") Troop Number
                 -#%th(width="30%") Location
                 -#%th(width="30%") Charter Sponsor
                 -#%th(width="10%") Inception Year
@@ -15,3 +16,4 @@
             - @scouts.each do |scout|
               %tr
                 %td= scout.full_name
+                %td= scout.troop.troop_number

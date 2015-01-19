@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature 'user adds troop' do
 
-  # scenario 'valid user adds scout', { js: true } do
-  scenario 'valid user adds scout' do
+  scenario 'valid user adds scout', { js: true } do
+  # scenario 'valid user adds scout' do
 
       sign_in
 
