@@ -1,8 +1,6 @@
 require 'rails_helper'
 
-feature 'user signs in' do
-# feature 'user signs in', { js: true }  do
-
+feature 'user signs in', { js: true }  do
 
     scenario 'with valid email and password' do
     user = Fabricate(:user)

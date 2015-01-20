@@ -2,14 +2,15 @@ require 'rails_helper'
 
 feature 'user adds troop' do
 
-  # this is still creating duplicate troops!
-  
   scenario 'valid user adds scout', { js: true } do
 
       sign_in
 
-    visit new_troop_path
     troop = Fabricate(:troop)
+
+    # put this after fabriate before fill-in for best timing
+    visit new_troop_path
+
     fill_in 'Troop number', with: troop.troop_number
     fill_in 'Location', with: troop.location
     fill_in 'Charter sponsor', with: troop.charter_sponsor

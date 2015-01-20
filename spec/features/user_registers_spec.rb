@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-feature 'User registers' do
-# feature 'User registers', { js: true} do
+feature 'User registers', { js: true} do
 
     background do
     visit register_path
@@ -9,7 +8,6 @@ feature 'User registers' do
 
   scenario 'with valid info' do
     fill_in_valid_user_info
-    # binding.pry
     click_button 'Sign Up'
     expect(page).to have_content("Thank you for registering with Scout Accounts, please sign in now.")
   end
