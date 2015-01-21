@@ -1,23 +1,21 @@
 require 'rails_helper'
 
-feature 'user adds troop' do
+feature 'user adds troop', { js: true } do
 
-  scenario 'valid user adds scout', { js: true } do
+  scenario 'valid user adds scout' do
 
-      sign_in
+    sign_in
 
-    troop = Fabricate(:troop)
-
-    # put this after fabriate before fill-in for best timing
     visit new_troop_path
 
-    fill_in 'Troop number', with: troop.troop_number
-    fill_in 'Location', with: troop.location
-    fill_in 'Charter sponsor', with: troop.charter_sponsor
+    fill_in 'Troop number', with: 261
+    fill_in 'Location', with: 'Northfield, Ohio'
+    fill_in 'Charter sponsor', with: 'Northfield Presbyterian Church'
     select '1938', from: "troop[inception_year]"
     click_button 'Add Troop'
-    expect(page).to have_content(troop.troop_number)
-    expect(page).to have_content(troop.location)
-    expect(page).to have_content(troop.charter_sponsor)
+    expect(page).to have_content('261')
+    expect(page).to have_content('1938')
+    expect(page).to have_content('Northfield, Ohio')
+    expect(page).to have_content('Northfield Presbyterian Church')
   end
 end

@@ -1,19 +1,22 @@
 require 'rails_helper'
 
-feature 'user adds scout' do
+feature 'valid user', { js: true } do
 
-  scenario 'valid user adds scout', { js: true } do
+  scenario 'adds scout' do
 
       sign_in
 
-      troop = Fabricate(:troop, troop_number: 261)
-      scout = Fabricate(:scout, troop_id: troop.id)
+      Fabricate(:troop, troop_number: 261)
 
       # put this after fabricate before fill-in to make it work
       visit new_scout_path
 
-      fill_in 'Full name', with: scout.full_name
+      fill_in 'Full name', with: 'Toby Smith'
       select '1', from: 'scout[troop_id]'
+
       click_button 'Add Scout'
-  end
+
+      expect(page).to have_content 'Toby Smith'
+      expect(page).to have_content '261'
+    end
 end

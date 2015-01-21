@@ -1,4 +1,4 @@
 class Troop < ActiveRecord::Base
   has_many :scouts
-#TODO:  validates_uniqueness_of :charter_sponsor
+  validates_uniqueness_of :troop_number
 end

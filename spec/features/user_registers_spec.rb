@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'User registers', { js: true} do
 
-    background do
+  background do
     visit register_path
   end
 
