@@ -12,6 +12,8 @@
           %ul.dropdown-menu(role="menu" aria-labelledby="dlabel")
             %li
               %a(href="#") menu link goes here
+              = link_to 'Add Troop', new_troop_path
+              = link_to 'Add Scout', new_scout_path
               = link_to 'List Troops', troops_path
               = link_to 'List Scouts', scouts_path
               = link_to 'List Transactions', transactions_path
