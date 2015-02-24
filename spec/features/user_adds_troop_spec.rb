@@ -8,7 +8,7 @@ feature 'user adds troop', { js: true } do
 
     visit new_troop_path
 
-    fill_in 'Troop number', with: 261
+    fill_in 'Number', with: 261
     fill_in 'Location', with: 'Northfield, Ohio'
     fill_in 'Charter sponsor', with: 'Northfield Presbyterian Church'
     select '1938', from: "troop[inception_year]"
