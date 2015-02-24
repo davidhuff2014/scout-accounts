@@ -12,7 +12,7 @@ class TroopsController < ApplicationController
     @troop = Troop.new(troop_params)
 
     if @troop.save
-      flash[:success] = "Success, troop #{ @troop.troop_number } has now been added!"
+      flash[:success] = "Success, troop #{ @troop.number } has now been added!"
       redirect_to troops_path
     else
       render :new
@@ -26,6 +26,6 @@ class TroopsController < ApplicationController
   private
 
   def troop_params
-    params.require(:troop).permit(:troop_number, :location, :inception_year, :charter_sponsor)
+    params.require(:troop).permit(:number, :location, :inception_year, :charter_sponsor)
   end
 end

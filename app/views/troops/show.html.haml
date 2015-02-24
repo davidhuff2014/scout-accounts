@@ -3,7 +3,7 @@
     .col-sm-10.col-sm-offset-1
       %article
         %header
-          %h1 Troop #{ @troop.troop_number }
+          %h1 Troop #{ @troop.number }
           - @troop.scouts.each do |scout|
             .col-sm-offset-2
               %td= scout.full_name

@@ -6,7 +6,7 @@ feature 'valid user', { js: true } do
 
       sign_in
 
-      Fabricate(:troop, troop_number: 261)
+      Fabricate(:troop, number: 261)
 
       # put this after fabricate before fill-in to make it work
       visit new_scout_path
