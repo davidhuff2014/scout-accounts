@@ -8,4 +8,4 @@
 
 troop = Troop.create(number: 261)
 scout = Scout.create(full_name: 'Dave Huff', troop_id: troop.id)
-Transaction.create(scout_id: scout.id, transaction_date: '2014-10-14', payment: 800, transaction_memo: 'money was deposited', deposit: 800, running_total: 800)
+Transaction.create(scout_id: scout.id, date: '2014-10-14', payment: 800, memo: 'money was deposited', deposit: 800, running_total: 800)

@@ -17,8 +17,8 @@
             - @transactions.each do |transaction|
               %tr
                 %td= transaction.scout_id
-                %td= transaction.transaction_date
-                %td= transaction.transaction_memo
+                %td= transaction.date
+                %td= transaction.memo
                 %td= number_to_currency(transaction.payment / 100)
                 %td= number_to_currency(transaction.deposit / 100)
                 %td= number_to_currency(transaction.running_total / 100)
