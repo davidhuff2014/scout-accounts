@@ -15,4 +15,12 @@ RSpec.describe EventsController, :type => :controller do
     end
   end
 
+  describe 'GET #new' do
+    it 'sets @event to a new event' do
+      get :new
+      expect(assigns(:event)).to be_new_record
+      expect(assigns(:event)).to be_instance_of Event
+    end
+  end
+
 end

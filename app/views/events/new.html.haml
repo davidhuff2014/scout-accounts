@@ -1,0 +1,12 @@
+%section.event.container
+  .row
+    .col-sm-10-col-sm-offset-1
+      %article
+        = bootstrap_form_for @event, class: 'event', layout: :horizontal, label_col: 'col-sm-3', control_col: 'col-sm-6' do |f|
+          %header
+            %h1 Enter Scouting Event Information Here:
+          %fieldset
+            = f.text_field :name, control_col: 'col-sm-5'
+            = date_select :date, :date , :class => 'datepicker', control_col: 'col-sm-2'
+            .col-sm-offset-4
+              = f.submit value: 'Add Event', class: 'btn btn-default'

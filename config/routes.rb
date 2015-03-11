@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
   root 'pages#front'
-  get 'scouts',       to: 'scouts#index'
+  # get 'scouts',       to: 'scouts#index'
   # get 'troops',       to: 'troops#index'
   get 'transactions', to: 'transactions#index'
   # get 'users', to: 'users#index'
   get 'home', to: 'users#index'
   get 'events', to: 'events#index'
 
+  resources :events, only: [:new,:index]
   resources :troops, only: [:new, :index, :show, :create]
   resources :users, only: [:new, :index, :create]
   resources :scouts, only: [:new, :index, :show, :create]
