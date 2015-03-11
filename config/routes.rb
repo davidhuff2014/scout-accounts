@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'transactions', to: 'transactions#index'
   # get 'users', to: 'users#index'
   get 'home', to: 'users#index'
+  get 'events', to: 'events#index'
 
   resources :troops, only: [:new, :index, :show, :create]
   resources :users, only: [:new, :index, :create]

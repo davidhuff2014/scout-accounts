@@ -1,0 +1,16 @@
+%section.index.container
+  .row
+    .col-sm-10.col-sm-offset-1
+      %article
+        %header
+          %h1 Events
+          %table.table
+            %thead
+              %tr
+                %th(width="20%") Event
+                %th(width="20%") Date
+            %tbody
+            - @events.each do |event|
+              %tr
+                %td= event.name
+                %td= event.date
