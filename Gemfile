@@ -70,7 +70,7 @@ group :development, :test do
   # test through the browser
   gem 'launchy'
   # testing pages with javascript (, { js:true } forces browser activity)
-  gem 'selenium-webdriver', '2.43.0'
+  gem 'selenium-webdriver', '>= 2.45'
   # cleans up database so selenium-webdriver works correctly
   gem 'database_cleaner'
   # catch some errors
