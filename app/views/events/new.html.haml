@@ -7,6 +7,8 @@
             %h1 Enter Scouting Event Information Here:
           %fieldset
             = f.text_field :name, control_col: 'col-sm-5'
-            = date_select :date, :date , :class => 'datepicker', control_col: 'col-sm-2'
+            .col-sm-offset-4
+              = date_select :event, :date , control_col: 'col-sm-2'
+            %label
             .col-sm-offset-4
               = f.submit value: 'Add Event', class: 'btn btn-default'

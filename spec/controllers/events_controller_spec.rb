@@ -23,4 +23,11 @@ RSpec.describe EventsController, :type => :controller do
     end
   end
 
+  describe 'POST #create' do
+    it 'redirects to events path' do
+      post :create, event: Fabricate.attributes_for(:event)
+      expect(response).to redirect_to (events_path)
+    end
+  end
+
 end
