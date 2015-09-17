@@ -76,6 +76,12 @@ group :development, :test do
   # catch some errors
   gem 'pry'
   gem 'pry-byebug'
+  # get fancy with cucumber
+  gem 'page-object'
+end
+
+group :test do
+  gem 'cucumber-rails', require: false
 end
 
 group :production, :staging do
