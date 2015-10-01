@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.3'
 
 # sass powered bootstrap
 gem 'bootstrap-sass'
@@ -6,7 +7,7 @@ gem 'autoprefixer-rails'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.2.4'
 # need my haml
 gem 'haml-rails'
 # Use SCSS for stylesheets
@@ -43,6 +44,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# heroku recommended app server
+  gem 'puma'
+  gem 'rack-timeout'
 # Use unicorn as the app server
 # gem 'unicorn'
 

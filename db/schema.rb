@@ -13,24 +13,24 @@
 
 ActiveRecord::Schema.define(version: 20150224002803) do
 
-  create_table "events", force: true do |t|
-    t.string   "name"
+  create_table "events", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "scouts", force: true do |t|
-    t.string   "full_name"
+  create_table "scouts", force: :cascade do |t|
+    t.string   "full_name",  limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "troop_id"
   end
 
-  create_table "transactions", force: true do |t|
+  create_table "transactions", force: :cascade do |t|
     t.integer  "scout_id"
     t.date     "date"
-    t.string   "memo"
+    t.string   "memo",          limit: 255
     t.integer  "payment"
     t.integer  "deposit"
     t.integer  "running_total"
@@ -38,19 +38,19 @@ ActiveRecord::Schema.define(version: 20150224002803) do
     t.datetime "updated_at"
   end
 
-  create_table "troops", force: true do |t|
+  create_table "troops", force: :cascade do |t|
     t.integer  "number"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "location"
+    t.string   "location",        limit: 255
     t.integer  "inception_year"
-    t.string   "charter_sponsor"
+    t.string   "charter_sponsor", limit: 255
   end
 
-  create_table "users", force: true do |t|
-    t.string   "email"
-    t.string   "password_digest"
-    t.string   "full_name"
+  create_table "users", force: :cascade do |t|
+    t.string   "email",           limit: 255
+    t.string   "password_digest", limit: 255
+    t.string   "full_name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
