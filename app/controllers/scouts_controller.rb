@@ -10,13 +10,18 @@ class ScoutsController < ApplicationController
   end
 
   def create
-    @scout = Scout.new(scout_params)
+    if Troop.count > 0
+      @scout = Scout.new(scout_params)
 
-    if @scout.save
-      flash[:success] = "Success, scout #{ @scout.full_name } has been added!"
-      redirect_to scouts_path
+      if @scout.save
+        flash[:success] = "Success, scout #{ @scout.full_name } has been added!"
+        redirect_to scouts_path
+      else
+        render :new
+      end
     else
-      render :new
+      flash[:danger] = "You must add a troop before adding scouts!"
+      redirect_to new_troop_path
     end
   end
 
