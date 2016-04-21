@@ -8,5 +8,5 @@
           %fieldset
             = f.text_field :full_name, control_col: 'col-sm-5'
             = f.select :troop_id, options_for_select(Troop.all.map { |troop| [troop.number, troop.id] }), control_col: 'col-sm-2'
-            .col-sm-offset-4
+            .col-sm-offset-5
               = f.submit value: 'Add Scout', class: 'btn btn-default'

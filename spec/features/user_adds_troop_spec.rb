@@ -12,8 +12,8 @@ feature 'user adds troop', { js: true } do
     fill_in 'Location', with: 'Northfield, Ohio'
     fill_in 'Charter sponsor', with: 'Northfield Presbyterian Church'
     select '1938', from: "troop[inception_year]"
-    # after a year and a half of testing suddenly it cannot find the button!
-    find_button 'Add Troop'
+    # after a year and a half of testing suddenly one click is not enough!
+    click_button 'Add Troop'
     click_button 'Add Troop'
     expect(page).to have_content('261')
     expect(page).to have_content('1938')
