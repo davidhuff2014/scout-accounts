@@ -41,12 +41,25 @@ RSpec.describe ScoutsController, :type => :controller do
       let(:action) { post :create }
     end
 
+    it 'redirects to new_troop_path because no troop exists' do
+      post :create, scout: Fabricate.attributes_for(:scout)
+      expect(response).to redirect_to new_troop_path
+    end
+
+    it 'sets the notice to danger because no troop exists' do
+      post :create, scout: Fabricate.attributes_for(:scout)
+      expect(response).to redirect_to new_troop_path
+      expect(flash[:danger]).not_to be_blank
+    end
+
     it 'redirects to scouts path' do
+      Fabricate(:troop, number: 261)
       post :create, scout: Fabricate.attributes_for(:scout)
       expect(response).to redirect_to scouts_path
     end
 
     it 'sets the notice' do
+      Fabricate(:troop, number: 261)
       post :create, scout: Fabricate.attributes_for(:scout)
       expect(flash[:success]).not_to be_blank
     end
