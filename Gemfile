@@ -61,14 +61,23 @@ group :development, :test do
   gem 'sqlite3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   # gem 'spring'
+  # go really fast -don't want spring
+  gem 'zeus'
+  # catch some errors
+  gem 'pry'
+  gem 'pry-byebug'
+
+end
+
+group :test do
   # time to do some testing
   gem 'rspec-rails'
   # lets build something to test
   gem 'fabrication'
   # need some data populated
   gem 'faker'
-  # go really fast
-  gem 'zeus'
+  # what they all want
+  gem 'cucumber-rails', require: false
   # some high level testing
   gem 'capybara'
   # test through the browser
@@ -77,15 +86,8 @@ group :development, :test do
   gem 'selenium-webdriver', '>= 2.45'
   # cleans up database so selenium-webdriver works correctly
   gem 'database_cleaner'
-  # catch some errors
-  gem 'pry'
-  gem 'pry-byebug'
   # get fancy with cucumber
   gem 'page-object'
-end
-
-group :test do
-  gem 'cucumber-rails', require: false
 end
 
 group :production, :staging do
