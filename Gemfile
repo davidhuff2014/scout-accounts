@@ -56,7 +56,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# Response to alerts from git-hub
+# Response to alert from git-hub
  gem 'loofah', '~> 2.2.1'
 
 group :development, :test do
